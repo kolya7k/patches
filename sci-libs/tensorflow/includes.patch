@@ -1,0 +1,22 @@
+--- a/tensorflow/lite/kernels/internal/spectrogram.cc
++++ b/tensorflow/lite/kernels/internal/spectrogram.cc
+@@ -17,6 +17,7 @@
+
+ #include <assert.h>
+ #include <math.h>
++#include <cstdint>
+
+ #include "third_party/fft2d/fft.h"
+
+--- a/tensorflow/tsl/lib/io/cache.h
++++ b/tensorflow/tsl/lib/io/cache.h
+@@ -18,6 +18,8 @@
+
+ #include "tensorflow/tsl/platform/stringpiece.h"
+
++#include <cinttypes>
++
+ // A Cache is an interface that maps keys to values.  It has internal
+ // synchronization and may be safely accessed concurrently from
+ // multiple threads.  It may automatically evict entries to make room
+
